@@ -1,0 +1,35 @@
+#companies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.company {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    user-select: none;
+    /* Impede a seleção de texto para melhorar a usabilidade */
+}
+
+.pop-up {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0056b3;
+    color: rgba(255, 255, 255, 0.605);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pop-up.active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
